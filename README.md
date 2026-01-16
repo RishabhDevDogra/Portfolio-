@@ -1,6 +1,6 @@
 # Rishabh Dogra – Portfolio
 
-A minimal, Apple-inspired portfolio showcasing backend and platform engineering work. Built for GitHub Pages.
+A minimal, portfolio showcasing backend and platform engineering work. Built for GitHub Pages.
 
 ## Deploy to GitHub Pages
 
