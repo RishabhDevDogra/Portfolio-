@@ -125,21 +125,21 @@
         </a>
       </div>
 
-      <div class="animate-fade-in-up stagger-3 mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 justify-items-center text-center">
-        <div class="glass metric-chip rounded-2xl p-4">
-          <p class="text-sm text-gray-500 dark:text-gray-500">API throughput</p>
-          <p class="text-2xl font-semibold">10K+ rps</p>
-          <p class="text-sm text-gray-500 dark:text-gray-500">with intelligent rate limiting</p>
+      <div class="animate-fade-in-up stagger-3 mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 justify-items-center text-center">
+        <div class="glass metric-chip rounded-3xl p-8 hover:scale-110 hover:shadow-2xl transition-all duration-300 group cursor-pointer border border-white/10 dark:border-white/5 backdrop-blur-xl">
+          <p class="text-xs uppercase tracking-[0.15em] text-gray-500 dark:text-gray-500 font-semibold mb-3">API Throughput</p>
+          <p class="text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500">10K+</p>
+          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">requests/sec<br />with intelligent rate limiting</p>
         </div>
-        <div class="glass metric-chip rounded-2xl p-4">
-          <p class="text-sm text-gray-500 dark:text-gray-500">Data scale</p>
-          <p class="text-2xl font-semibold">1M+ records</p>
-          <p class="text-sm text-gray-500 dark:text-gray-500">processed in near real-time</p>
+        <div class="glass metric-chip rounded-3xl p-8 hover:scale-110 hover:shadow-2xl transition-all duration-300 group cursor-pointer border border-white/10 dark:border-white/5 backdrop-blur-xl">
+          <p class="text-xs uppercase tracking-[0.15em] text-gray-500 dark:text-gray-500 font-semibold mb-3">Data Scale</p>
+          <p class="text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-teal-400 via-cyan-400 to-blue-500">1M+</p>
+          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">records processed<br />in near real-time</p>
         </div>
-        <div class="glass metric-chip rounded-2xl p-4">
-          <p class="text-sm text-gray-500 dark:text-gray-500">Reliability</p>
-          <p class="text-2xl font-semibold">99.99% uptime</p>
-          <p class="text-sm text-gray-500 dark:text-gray-500">observability-first design</p>
+        <div class="glass metric-chip rounded-3xl p-8 hover:scale-110 hover:shadow-2xl transition-all duration-300 group cursor-pointer border border-white/10 dark:border-white/5 backdrop-blur-xl">
+          <p class="text-xs uppercase tracking-[0.15em] text-gray-500 dark:text-gray-500 font-semibold mb-3">Reliability</p>
+          <p class="text-4xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-400 to-teal-500">99.99%</p>
+          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">uptime maintained<br />observability-first design</p>
         </div>
       </div>
     </div>
@@ -245,9 +245,11 @@
   </section>
 
   <!-- Experience -->
-  <section id="experience" class="max-w-5xl mx-auto px-8 py-32">
-    <h2 class="text-3xl font-semibold mb-10">Experience</h2>
-    <div class="glass-card card-accent rounded-2xl p-10 max-w-3xl">
+  <section id="experience" class="relative py-32 overflow-hidden">
+    <div class="spotlight"></div>
+    <div class="max-w-5xl mx-auto px-8 relative z-10">
+      <h2 class="text-3xl font-semibold mb-12">Experience</h2>
+      <div class="glass-card card-accent rounded-2xl p-10 max-w-3xl hover:scale-105 hover:shadow-2xl transition-all duration-300">
       <div class="space-y-4">
         <div>
           <h3 class="text-xl font-semibold">Senior Backend Engineer (you're hiring for this)</h3>
@@ -257,20 +259,20 @@
           Owned critical paths: billing, validation, API gateway. Shipped 50+ changes/quarter with zero regressions. Built observability-first (SLOs, canary deploys, feature flags). Led incident response. Mentored 2 junior engineers.
         </p>
         <div class="space-y-2.5">
-          <div class="flex items-start gap-3">
-            <div class="w-1.5 h-1.5 rounded-full bg-gray-400 dark:bg-gray-600 mt-2"></div>
+          <div class="flex items-start gap-3 group hover:translate-x-1 transition-transform duration-200">
+            <div class="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 mt-2 group-hover:scale-150 transition-transform duration-300"></div>
             <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
               Rebuilt billing pipeline (1M+ records/day) with idempotent jobs; cut errors by ~65% and enabled near real-time reconciliation.
             </p>
           </div>
-          <div class="flex items-start gap-3">
-            <div class="w-1.5 h-1.5 rounded-full bg-gray-400 dark:bg-gray-600 mt-2"></div>
+          <div class="flex items-start gap-3 group hover:translate-x-1 transition-transform duration-200">
+            <div class="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-teal-400 to-cyan-500 mt-2 group-hover:scale-150 transition-transform duration-300"></div>
             <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
               Designed API gateway (10K+ rps) with rate limiting and caching; lowered p95 latency ~40% and stabilized peak traffic.
             </p>
           </div>
-          <div class="flex items-start gap-3">
-            <div class="w-1.5 h-1.5 rounded-full bg-gray-400 dark:bg-gray-600 mt-2"></div>
+          <div class="flex items-start gap-3 group hover:translate-x-1 transition-transform duration-200">
+            <div class="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-green-400 to-teal-500 mt-2 group-hover:scale-150 transition-transform duration-300"></div>
             <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
               Instituted observability and deployment safety (SLOs, canary, feature flags); sustained 99.99% uptime across core services.
             </p>
