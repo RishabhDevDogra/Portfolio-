@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rishabh Dogra – Software Engineer</title>
+
+  <!-- Tailwind CDN + Dark Mode Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
+
+  <!-- Animations -->
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Apple font -->
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+        "Helvetica Neue", Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  </style>
+</head>
+
+<body class="bg-white dark:bg-black text-gray-900 dark:text-gray-100 transition-colors duration-500">
+
+  <!-- Dark mode toggle -->
+  <button id="themeToggle"
+    class="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full glass
+           flex items-center justify-center text-xl
+           hover:scale-105 active:scale-95 transition-transform duration-200">
+    ☾
+  </button>
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full glass z-50 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
+      <span class="font-bold text-xl tracking-tight">Rishabh Dogra</span>
+      <div class="flex gap-8 text-sm font-medium">
+        <a href="#projects" class="nav-link hover:text-purple-600 dark:hover:text-purple-400 transition">Projects</a>
+        <a href="#experience" class="nav-link hover:text-purple-600 dark:hover:text-purple-400 transition">Experience</a>
+        <a href="#contact" class="nav-link hover:text-purple-600 dark:hover:text-purple-400 transition">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative min-h-screen flex items-center overflow-hidden">
+    <div class="spotlight"></div>
+    <div class="max-w-6xl mx-auto px-8 py-32 relative z-10">
+      <div class="animate-fade-in-up stagger-1 mb-12 space-y-6">
+        <p class="text-xs uppercase tracking-[0.3em] text-gray-500 dark:text-gray-500">Software Engineer · Backend & Platform</p>
+        <h1 class="text-6xl md:text-7xl font-semibold tracking-tight leading-[1.05]">
+          Building reliable systems<br />
+          <span class="gradient-text">for millions of users.</span>
+        </h1>
+        <p class="max-w-3xl text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+          FAANG-level engineering rigor: high-performance services, fault-tolerant architectures, and developer-first tooling that keep critical platforms online and fast.
+        </p>
+      </div>
+
+      <div class="animate-fade-in-up stagger-2 flex gap-4">
+        <a href="#projects"
+          class="cta-gradient px-8 py-3.5 rounded-full text-white dark:text-black font-medium text-base shadow-lg shadow-gray-900/10 dark:shadow-white/10 hover:opacity-90 active:scale-95 transition-all duration-200">
+          View My Work
+        </a>
+
+        <a href="#contact"
+          class="glass px-8 py-3.5 rounded-full font-medium text-base
+                 hover:scale-[1.02] active:scale-95 transition-all duration-200">
+          Get in Touch
+        </a>
+      </div>
+
+      <div class="animate-fade-in-up stagger-3 mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="glass metric-chip rounded-2xl p-4">
+          <p class="text-sm text-gray-500 dark:text-gray-500">API throughput</p>
+          <p class="text-2xl font-semibold">10K+ rps</p>
+          <p class="text-sm text-gray-500 dark:text-gray-500">with intelligent rate limiting</p>
+        </div>
+        <div class="glass metric-chip rounded-2xl p-4">
+          <p class="text-sm text-gray-500 dark:text-gray-500">Data scale</p>
+          <p class="text-2xl font-semibold">1M+ records</p>
+          <p class="text-sm text-gray-500 dark:text-gray-500">processed in near real-time</p>
+        </div>
+        <div class="glass metric-chip rounded-2xl p-4">
+          <p class="text-sm text-gray-500 dark:text-gray-500">Reliability</p>
+          <p class="text-2xl font-semibold">99.99% uptime</p>
+          <p class="text-sm text-gray-500 dark:text-gray-500">observability-first design</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="relative py-28 overflow-hidden">
+    <div class="spotlight"></div>
+    <div class="max-w-5xl mx-auto px-8 relative z-10">
+      <h2 class="text-3xl font-semibold mb-4">Skills</h2>
+      <p class="text-gray-600 dark:text-gray-400 mb-10">Core stack for performant, reliable services with clean delivery.</p>
+
+      <div class="mb-6">
+        <p class="text-sm uppercase tracking-[0.18em] text-gray-500 dark:text-gray-500 mb-3">Core</p>
+        <div class="flex flex-wrap gap-3">
+          <span class="skill-pill animate-fade-in-up stagger-1 px-5 py-2.5 rounded-full text-sm font-medium">C# / .NET</span>
+          <span class="skill-pill animate-fade-in-up stagger-2 px-5 py-2.5 rounded-full text-sm font-medium">API design & auth</span>
+          <span class="skill-pill animate-fade-in-up stagger-3 px-5 py-2.5 rounded-full text-sm font-medium">SQL + Redis</span>
+          <span class="skill-pill animate-fade-in-up stagger-4 px-5 py-2.5 rounded-full text-sm font-medium">Performance tuning</span>
+          <span class="skill-pill animate-fade-in-up stagger-5 px-5 py-2.5 rounded-full text-sm font-medium">Observability (SLOs)</span>
+          <span class="skill-pill animate-fade-in-up stagger-6 px-5 py-2.5 rounded-full text-sm font-medium">CI/CD & feature flags</span>
+        </div>
+      </div>
+
+      <div>
+        <p class="text-sm uppercase tracking-[0.18em] text-gray-500 dark:text-gray-500 mb-3">Comfortable</p>
+        <div class="flex flex-wrap gap-3">
+          <span class="skill-pill animate-fade-in-up stagger-2 px-5 py-2.5 rounded-full text-sm font-medium">TypeScript</span>
+          <span class="skill-pill animate-fade-in-up stagger-3 px-5 py-2.5 rounded-full text-sm font-medium">Node.js</span>
+          <span class="skill-pill animate-fade-in-up stagger-4 px-5 py-2.5 rounded-full text-sm font-medium">Docker</span>
+          <span class="skill-pill animate-fade-in-up stagger-5 px-5 py-2.5 rounded-full text-sm font-medium">Azure</span>
+          <span class="skill-pill animate-fade-in-up stagger-6 px-5 py-2.5 rounded-full text-sm font-medium">Caching strategies</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-32">
+    <div class="max-w-5xl mx-auto px-8">
+      <h2 class="text-3xl font-semibold mb-4">Featured Work</h2>
+      <p class="text-lg text-gray-600 dark:text-gray-400 mb-12 max-w-2xl">
+        Enterprise-scale solutions built with precision and performance.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="glass-card card-accent rounded-2xl p-8 group cursor-pointer">
+          <h3 class="text-xl font-semibold mb-3">
+            Billing Automation Platform
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+            Architected and delivered a .NET platform that replaced legacy Excel workflows,
+            enabling real-time processing of over 1M+ customer records with zero downtime.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">.NET Core</span>
+            <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">SQL Server</span>
+            <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">Azure</span>
+          </div>
+        </div>
+
+        <div class="glass-card card-accent rounded-2xl p-8 group cursor-pointer">
+          <h3 class="text-xl font-semibold mb-3">
+            Enterprise Validation Engine
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+            Designed a rules-driven validation engine that reduced manual review by 70%,
+            improved data accuracy, and scaled seamlessly across enterprise workflows.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">C#</span>
+            <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">REST APIs</span>
+            <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">Microservices</span>
+          </div>
+        </div>
+
+        <div class="glass-card card-accent rounded-2xl p-8 group cursor-pointer">
+          <h3 class="text-xl font-semibold mb-3">
+            High-Performance API Gateway
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+            Built a scalable API gateway handling 10K+ requests/sec with intelligent
+            rate limiting, caching, and real-time monitoring capabilities.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">Node.js</span>
+            <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">Redis</span>
+            <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">Docker</span>
+          </div>
+        </div>
+
+        <div class="glass-card card-accent rounded-2xl p-8 group cursor-pointer">
+          <h3 class="text-xl font-semibold mb-3">
+            Real-time Analytics Dashboard
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+            Developed an interactive analytics platform processing millions of data points,
+            delivering actionable insights with sub-second latency.
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">React</span>
+            <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">D3.js</span>
+            <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">WebSockets</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="max-w-5xl mx-auto px-8 py-32">
+    <h2 class="text-3xl font-semibold mb-10">Experience</h2>
+    <div class="glass-card card-accent rounded-2xl p-10 max-w-3xl">
+      <div class="space-y-4">
+        <div>
+          <h3 class="text-xl font-semibold">Software Engineer — Platform</h3>
+          <p class="text-gray-500 dark:text-gray-500 text-sm">Enterprise Retail · High-traffic services</p>
+        </div>
+        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+          Backend and platform engineering for customer-facing systems serving millions of users; focus on performance, reliability, and clean delivery practices.
+        </p>
+        <div class="space-y-2.5">
+          <div class="flex items-start gap-3">
+            <div class="w-1.5 h-1.5 rounded-full bg-gray-400 dark:bg-gray-600 mt-2"></div>
+            <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+              Rebuilt billing pipeline (1M+ records/day) with idempotent jobs; cut errors by ~65% and enabled near real-time reconciliation.
+            </p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-1.5 h-1.5 rounded-full bg-gray-400 dark:bg-gray-600 mt-2"></div>
+            <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+              Designed API gateway (10K+ rps) with rate limiting and caching; lowered p95 latency ~40% and stabilized peak traffic.
+            </p>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-1.5 h-1.5 rounded-full bg-gray-400 dark:bg-gray-600 mt-2"></div>
+            <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+              Instituted observability and deployment safety (SLOs, canary, feature flags); sustained 99.99% uptime across core services.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-32">
+    <div class="max-w-4xl mx-auto px-8 text-center">
+      <h2 class="text-3xl font-semibold mb-4">Let’s collaborate</h2>
+      <p class="text-lg text-gray-600 dark:text-gray-400 mb-12 max-w-xl mx-auto">
+        Send a quick note or connect directly. I respond fast.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="https://github.com/rishabhd" target="_blank"
+          class="glass px-7 py-3 rounded-full font-medium hover:scale-[1.03] active:scale-95 transition-all duration-200">
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/rishabhd" target="_blank"
+          class="glass px-7 py-3 rounded-full font-medium hover:scale-[1.03] active:scale-95 transition-all duration-200">
+          LinkedIn
+        </a>
+        <a href="mailto:your.email@example.com"
+          class="glass px-7 py-3 rounded-full font-medium hover:scale-[1.03] active:scale-95 transition-all duration-200">
+          Email
+        </a>
+        <a href="https://cal.com/your-handle" target="_blank"
+          class="glass px-7 py-3 rounded-full font-medium hover:scale-[1.03] active:scale-95 transition-all duration-200">
+          Book 15 min
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-200/50 dark:border-gray-800/50 py-12">
+    <div class="max-w-5xl mx-auto px-8 text-center">
+      <p class="text-sm text-gray-500 dark:text-gray-500">
+        © 2026 Rishabh Dogra
+      </p>
+    </div>
+  </footer>
+
+  <!-- Theme JS -->
+  <script src="js/theme.js"></script>
+
+</body>
+</html>
