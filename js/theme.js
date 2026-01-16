@@ -1,15 +1,39 @@
 const toggle = document.getElementById('themeToggle');
 const html = document.documentElement;
 
-if (localStorage.theme === 'dark') {
-  html.classList.add('dark');
-  toggle.innerHTML = '☼'; // Change button text to sun
+function applyTheme(isDark, persist = false) {
+  if (isDark) {
+    html.classList.add('dark');
+    toggle.innerHTML = '☼';
+    toggle.setAttribute('aria-label', 'Switch to light mode');
+    toggle.setAttribute('aria-pressed', 'true');
+    if (persist) localStorage.theme = 'dark';
+  } else {
+    html.classList.remove('dark');
+    toggle.innerHTML = '☾';
+    toggle.setAttribute('aria-label', 'Switch to dark mode');
+    toggle.setAttribute('aria-pressed', 'false');
+    if (persist) localStorage.theme = 'light';
+  }
+}
+
+// Initialize: prefer saved theme, else system preference
+const stored = localStorage.getItem('theme');
+if (stored === 'dark' || stored === 'light') {
+  applyTheme(stored === 'dark');
 } else {
-  toggle.innerHTML = '☾'; // Change button text to moon
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(prefersDark);
+}
+
+// Optional: follow system changes if user hasn't explicitly chosen
+if (!stored && window.matchMedia) {
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    applyTheme(e.matches);
+  });
 }
 
 toggle.addEventListener('click', () => {
-  html.classList.toggle('dark');
-  localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
-  toggle.innerHTML = html.classList.contains('dark') ? '☼' : '☾'; // Update button text
+  const isDark = !html.classList.contains('dark');
+  applyTheme(isDark, true);
 });

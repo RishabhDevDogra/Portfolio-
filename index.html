@@ -10,6 +10,43 @@
   <script>
     tailwind.config = { darkMode: 'class' }
   </script>
+  
+  <!-- Performance hints -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+
+  <!-- SEO -->
+  <meta name="description" content="Software Engineer building reliable, high-performance platforms for millions of users. Backend & platform engineering with FAANG-level rigor.">
+  <link rel="canonical" href="https://<your-username>.github.io/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f8fafc">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b0f17">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Rishabh Dogra – Software Engineer">
+  <meta property="og:description" content="Reliable platforms for millions. High-performance services, fault-tolerant systems, clean delivery.">
+  <meta property="og:url" content="https://<your-username>.github.io/">
+  <meta property="og:image" content="https://<your-username>.github.io/images/og.png">
+  <meta property="og:image:alt" content="Rishabh Dogra – Software Engineer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rishabh Dogra – Software Engineer">
+  <meta name="twitter:description" content="Reliable platforms for millions. High-performance services, fault-tolerant systems, clean delivery.">
+  <meta name="twitter:image" content="https://<your-username>.github.io/images/og.png">
+
+  <!-- JSON-LD Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Rishabh Dogra",
+    "jobTitle": "Software Engineer",
+    "url": "https://<your-username>.github.io/",
+    "sameAs": [
+      "https://github.com/rishabhd",
+      "https://www.linkedin.com/in/rishabhd"
+    ]
+  }
+  </script>
 
   <!-- Animations -->
   <link rel="stylesheet" href="css/animations.css">
@@ -26,6 +63,7 @@
 </head>
 
 <body class="bg-white dark:bg-black text-gray-900 dark:text-gray-100 transition-colors duration-500">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:rounded-md focus:bg-white focus:text-black dark:focus:bg-black dark:focus:text-white">Skip to content</a>
 
   <!-- Dark mode toggle -->
   <button id="themeToggle"
@@ -36,7 +74,7 @@
   </button>
 
   <!-- Navbar -->
-  <nav class="fixed top-0 w-full glass z-50 transition-all duration-300">
+  <nav id="siteNav" role="navigation" aria-label="Primary" class="fixed top-0 w-full glass z-50 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
       <span class="font-bold text-xl tracking-tight">Rishabh Dogra</span>
       <div class="flex gap-8 text-sm font-medium">
@@ -48,9 +86,10 @@
   </nav>
 
   <!-- Hero -->
-  <section class="relative min-h-screen flex items-center overflow-hidden">
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+  <main id="main">
     <div class="spotlight"></div>
-    <div class="max-w-6xl mx-auto px-8 py-32 relative z-10">
+    <div class="max-w-6xl mx-auto px-8 py-32 relative z-10 text-center">
       <div class="animate-fade-in-up stagger-1 mb-12 space-y-6">
         <p class="text-xs uppercase tracking-[0.3em] text-gray-500 dark:text-gray-500">Software Engineer · Backend & Platform</p>
         <h1 class="text-6xl md:text-7xl font-semibold tracking-tight leading-[1.05]">
@@ -62,7 +101,7 @@
         </p>
       </div>
 
-      <div class="animate-fade-in-up stagger-2 flex gap-4">
+      <div class="animate-fade-in-up stagger-2 flex gap-4 justify-center flex-wrap">
         <a href="#projects"
           class="cta-gradient px-8 py-3.5 rounded-full text-white dark:text-black font-medium text-base shadow-lg shadow-gray-900/10 dark:shadow-white/10 hover:opacity-90 active:scale-95 transition-all duration-200">
           View My Work
@@ -75,7 +114,7 @@
         </a>
       </div>
 
-      <div class="animate-fade-in-up stagger-3 mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div class="animate-fade-in-up stagger-3 mt-12 grid grid-cols-1 sm:grid-cols-3 gap-4 justify-items-center text-center">
         <div class="glass metric-chip rounded-2xl p-4">
           <p class="text-sm text-gray-500 dark:text-gray-500">API throughput</p>
           <p class="text-2xl font-semibold">10K+ rps</p>
@@ -94,6 +133,7 @@
       </div>
     </div>
   </section>
+  </main>
 
   <!-- Skills -->
   <section class="relative py-28 overflow-hidden">
@@ -274,6 +314,43 @@
 
   <!-- Theme JS -->
   <script src="js/theme.js"></script>
+  <script>
+    // Compact nav and active link highlighting
+    const nav = document.getElementById('siteNav');
+    const navContainer = nav?.querySelector('div');
+    const links = Array.from(document.querySelectorAll('nav a.nav-link'));
+
+    function onScroll() {
+      const scrolled = window.scrollY > 24;
+      if (scrolled) {
+        nav.classList.add('nav-scrolled');
+        if (navContainer) navContainer.classList.add('py-3');
+      } else {
+        nav.classList.remove('nav-scrolled');
+        if (navContainer) navContainer.classList.remove('py-3');
+      }
+    }
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    const sections = ['projects','experience','contact']
+      .map(id => document.getElementById(id))
+      .filter(Boolean);
+
+    const linkByHash = new Map(links.map(a => [a.getAttribute('href') || '', a]));
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const id = '#' + entry.target.id;
+        const link = linkByHash.get(id);
+        if (!link) return;
+        if (entry.isIntersecting) {
+          links.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+    }, { threshold: 0.35 });
+    sections.forEach(sec => io.observe(sec));
+  </script>
 
 </body>
 </html>
