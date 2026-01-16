@@ -37,7 +37,7 @@ Before deploying, customize these in `index.html`:
 
 ## Design Notes
 
-- Apple aesthetic: clean typography, glass effects, subtle animations
+- clean typography, glass effects, subtle animations
 - Dark mode support (toggle in bottom-right)
 - Optimized for mobile & recruiter viewing
-- No external dependencies except Tailwind CDN
+- No external dependencies except Tailwind CDN 
