@@ -185,19 +185,26 @@
       <p class="text-lg text-gray-600 dark:text-gray-400 mb-12">Systems I built. Problems solved. Scale achieved.</p>
 
       <div class="grid md:grid-cols-2 gap-6">
-        <div class="glass-card card-accent rounded-2xl p-8 group cursor-pointer">
-          <h3 class="text-xl font-semibold mb-3">
-            Billing Platform (1M+ daily)
-          </h3>
-          <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-            Legacy Excel workflows were error-prone and slow. Rebuilt on .NET with idempotent jobs: 65% error reduction, real-time reconciliation, zero downtime across 10+ deployments.
-          </p>
-          <div class="flex flex-wrap gap-2">
-            <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">.NET Core</span>
-            <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">Idempotency</span>
-            <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">Azure</span>
-          </div>
-        </div>
+
+      <div class="glass-card card-accent rounded-2xl p-8 group cursor-pointer">
+  <h3 class="text-xl font-semibold mb-3">
+    Distributed API Rate Limiter
+  </h3>
+  <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+    Built a Redis-backed distributed rate limiter in .NET Core with per-user dynamic keys and token bucket algorithm. 
+    Tracks allowed vs blocked requests in real-time with per-user metrics. Multi-node ready and scalable.
+  </p>
+
+  <div class="flex flex-wrap gap-2 mb-4">
+    <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">.NET Core</span>
+    <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">Redis</span>
+    <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">Token Bucket</span>
+    <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">Metrics</span>
+    <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">Distributed</span>
+  </div>
+</div>
+
+
 
         <div class="glass-card card-accent rounded-2xl p-8 group cursor-pointer">
           <h3 class="text-xl font-semibold mb-3">
