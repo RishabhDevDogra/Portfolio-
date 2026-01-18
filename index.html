@@ -10,6 +10,16 @@
   <script>
     tailwind.config = { darkMode: 'class' }
   </script>
+
+  <!-- Apply dark mode immediately to prevent flash of light mode -->
+  <script>
+    const stored = localStorage.getItem('theme');
+    if (stored === 'light') {
+      document.documentElement.classList.remove('dark');
+    } else {
+      document.documentElement.classList.add('dark');
+    }
+  </script>
   
   <!-- Performance hints -->
   <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
