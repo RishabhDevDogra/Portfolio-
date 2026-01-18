@@ -7,32 +7,34 @@ function applyTheme(isDark, persist = false) {
     toggle.innerHTML = '☼';
     toggle.setAttribute('aria-label', 'Switch to light mode');
     toggle.setAttribute('aria-pressed', 'true');
-    if (persist) localStorage.theme = 'dark';
+    if (persist) localStorage.setItem('theme', 'dark');
   } else {
     html.classList.remove('dark');
     toggle.innerHTML = '☾';
     toggle.setAttribute('aria-label', 'Switch to dark mode');
     toggle.setAttribute('aria-pressed', 'false');
-    if (persist) localStorage.theme = 'light';
+    if (persist) localStorage.setItem('theme', 'light');
   }
 }
 
-// Initialize: prefer saved theme, else default to dark
-const stored = localStorage.getItem('theme');
-if (stored === 'dark' || stored === 'light') {
-  applyTheme(stored === 'dark');
+// Initialize: check if already set by head script, just sync the icon
+const currentTheme = localStorage.getItem('theme');
+const isDarkMode = html.classList.contains('dark');
+
+// Make sure icon matches current state
+if (isDarkMode) {
+  toggle.innerHTML = '☼';
+  toggle.setAttribute('aria-label', 'Switch to light mode');
+  toggle.setAttribute('aria-pressed', 'true');
 } else {
-  applyTheme(true);
+  toggle.innerHTML = '☾';
+  toggle.setAttribute('aria-label', 'Switch to dark mode');
+  toggle.setAttribute('aria-pressed', 'false');
 }
 
-// Optional: follow system changes if user hasn't explicitly chosen
-if (!stored && window.matchMedia) {
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-    applyTheme(e.matches);
-  });
-}
-
+// Toggle on click
 toggle.addEventListener('click', () => {
   const isDark = !html.classList.contains('dark');
   applyTheme(isDark, true);
 });
+
