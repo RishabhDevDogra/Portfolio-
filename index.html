@@ -5,16 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rishabh Dogra – Software Engineer</title>
 
-  <!-- Force dark mode on initial load -->
+  <!-- Dark mode by default -->
   <script>
-    (function() {
-      const theme = localStorage.getItem('theme');
-      if (theme === 'light') {
-        document.documentElement.classList.remove('dark');
-      } else {
-        document.documentElement.classList.add('dark');
-      }
-    })();
+    if (localStorage.getItem('theme') !== 'light') {
+      document.documentElement.classList.add('dark');
+    }
   </script>
 
   <!-- Tailwind CDN + Dark Mode Config -->
