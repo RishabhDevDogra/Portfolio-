@@ -17,13 +17,12 @@ function applyTheme(isDark, persist = false) {
   }
 }
 
-// Initialize: prefer saved theme, else system preference
+// Initialize: prefer saved theme, else default to dark
 const stored = localStorage.getItem('theme');
 if (stored === 'dark' || stored === 'light') {
   applyTheme(stored === 'dark');
 } else {
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  applyTheme(prefersDark);
+  applyTheme(true);
 }
 
 // Optional: follow system changes if user hasn't explicitly chosen
