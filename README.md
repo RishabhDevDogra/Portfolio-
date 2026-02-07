@@ -1,6 +1,6 @@
 # Rishabh Dev Dogra – Portfolio
 
-A minimal, portfolio showcasing backend and platform engineering work. Built for GitHub Pages.
+A minimal, portfolio built for GitHub Pages.
 
 ## Deploy to GitHub Pages
 
