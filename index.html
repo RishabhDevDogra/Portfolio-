@@ -251,7 +251,7 @@
             Distributed API Rate Limiter
           </h3>
           <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4 flex-grow">
-            Production-grade distributed rate limiter in .NET 8. Achieves 10K+ req/sec with <1ms p99 latency and 99.99% uptime SLA. Redis-backed with atomic Lua scripts, automatic in-memory circuit-breaker failover (<500ms), and four configurable algorithms (token bucket, fixed window, sliding window, leaky bucket). 50+ comprehensive tests.
+            Production-grade distributed rate limiter in .NET 8 handling 10K+ req/sec with <1ms p99 latency and 99.99% uptime. Redis-backed with atomic Lua scripts, circuit-breaker failover (<500ms), and four algorithms (token bucket, fixed window, sliding window, leaky bucket). 50+ tests.
           </p>
 
           <div class="flex flex-wrap gap-2 mb-4">
@@ -259,7 +259,6 @@
             <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">Redis</span>
             <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">Lua Scripting</span>
             <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">Circuit Breaker</span>
-            <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">xUnit</span>
           </div>
           <div class="flex items-center gap-2">
             <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-800/80 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors text-sm font-medium">
@@ -277,10 +276,10 @@
               Real-time Collaborative Doodle App
             </h3>
             <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4 flex-grow">
-              Real-time collaborative canvas like Google Docs for doodles. Multiple users draw, erase, and undo/redo together instantly via SignalR. Built on Event Sourcing + CQRS for full audit trail and version history. Every action replays seamlessly.
+              Real-time collaborative canvas like Google Docs for doodles. Multiple users draw, erase, and undo/redo together instantly via SignalR. Built on Event Sourcing + CQRS for a full audit trail, instant replay, and conflict-safe version history.
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
-              <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">.NET 10</span>
+              <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">.NET 8</span>
               <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">Event Sourcing</span>
               <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">CQRS</span>
               <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">SignalR</span>
