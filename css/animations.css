@@ -280,6 +280,48 @@ html {
               radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
 }
 
+/* Experience horizontal scroll hint */
+.experience-scroll {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.experience-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.experience-scroll > div {
+  scroll-snap-align: start;
+}
+
+.scroll-hint {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(100, 116, 139, 0.9);
+  background: rgba(255, 255, 255, 0.75);
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  backdrop-filter: blur(10px);
+  animation: nudgeRight 1.6s ease-in-out infinite;
+}
+
+.dark .scroll-hint {
+  color: rgba(203, 213, 225, 0.9);
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+@keyframes nudgeRight {
+  0%, 100% { transform: translateX(0); opacity: 0.85; }
+  50% { transform: translateX(6px); opacity: 1; }
+}
+
 /* Nav scrolled state */
 #siteNav.nav-scrolled {
   background: rgba(255, 255, 255, 0.82) !important;
