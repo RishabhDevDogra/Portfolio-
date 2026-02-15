@@ -189,9 +189,10 @@
 
       <!-- Backend & Languages -->
       <div class="mb-8">
-        <p class="text-sm uppercase tracking-[0.18em] text-gray-500 dark:text-gray-500 mb-3 font-semibold">Backend & Languages</p>
+        <p class="text-sm uppercase tracking-[0.18em] text-gray-500 dark:text-gray-500 mb-3 font-semibold">Backend & Solution Languages</p>
         <div class="flex flex-wrap gap-3">
           <span class="skill-pill animate-fade-in-up stagger-1 px-5 py-2.5 rounded-full text-sm font-medium">C# / .NET</span>
+          <span class="skill-pill animate-fade-in-up stagger-2 px-5 py-2.5 rounded-full text-sm font-medium">Python</span>
           <span class="skill-pill animate-fade-in-up stagger-2 px-5 py-2.5 rounded-full text-sm font-medium">Java</span>
           <span class="skill-pill animate-fade-in-up stagger-3 px-5 py-2.5 rounded-full text-sm font-medium">C++</span>
           <span class="skill-pill animate-fade-in-up stagger-4 px-5 py-2.5 rounded-full text-sm font-medium">REST APIs</span>
@@ -264,7 +265,7 @@
             Distributed API Rate Limiter
           </h3>
           <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4 flex-grow">
-            Production-grade distributed rate limiter in .NET 8 handling 10K+ req/sec with <1ms p99 latency and 99.99% uptime. Redis-backed with atomic Lua scripts, circuit-breaker failover (<500ms), and four algorithms (token bucket, fixed window, sliding window, leaky bucket). 50+ tests.
+            Production-grade distributed rate limiter in .NET 8 handling 10K+ req/sec with <1ms p99 latency and 99.99% uptime. Written with Redis-backed atomic Lua scripts, circuit-breaker failover (<500ms), and four algorithms (token bucket, fixed window, sliding window, leaky bucket). 50+ unit tests demonstrating code quality and feature verification.
           </p>
 
           <div class="flex flex-wrap gap-2 mb-4">
@@ -289,7 +290,7 @@
               Real-time Collaborative Doodle App
             </h3>
             <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4 flex-grow">
-              Real-time collaborative canvas like Google Docs for doodles. Multiple users draw, erase, and undo/redo together instantly via SignalR. Built on Event Sourcing + CQRS for a full audit trail, instant replay, and conflict-safe version history.
+              Real-time collaborative canvas like Google Docs for doodles. Wrote code for multiple users drawing, erasing, and undo/redo together instantly via SignalR. Built on Event Sourcing + CQRS architecture for full audit trail, instant replay, and conflict-safe version history. Demonstrates pattern design for collaborative features.
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
               <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">.NET 8</span>
@@ -309,7 +310,40 @@
       </div>
     </div>
   </section>
+  <!-- Code & Technical Contributions -->
+  <section class="relative py-16 sm:py-28 overflow-hidden">
+    <div class="spotlight"></div>
+    <div class="max-w-5xl mx-auto px-4 sm:px-8 relative z-10">
+      <h2 class="text-2xl sm:text-3xl font-semibold mb-3 sm:mb-4">Code & Technical Contributions</h2>
+      <p class="text-gray-600 dark:text-gray-400 mb-8 sm:mb-10">Writing solution code, testing features, and creating repeatable patterns for customers</p>
 
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <!-- Solution Code Writing -->
+        <div class="glass-card card-accent rounded-2xl p-6 sm:p-8">
+          <h3 class="text-lg font-semibold mb-4">Solution Code Writing</h3>
+          <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Production Code:</span> Wrote C#/.NET, Java, Python code for billing platforms, event-driven systems, AI integrations serving 10M+ records and 250K+ users.</li>
+            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Feature Testing & Verification:</span> Tested solution code with customers, verified functionality against requirements, provided feedback to engineering teams.</li>
+            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Code Collaboration:</span> Worked directly with Finance, HR, CMMS teams; wrote code that solved their specific problems; iterated based on customer feedback.</li>
+            <li><span class="font-semibold text-gray-900 dark:text-gray-100">SQL & Database:</span> Optimized queries (39% performance gain), designed schemas for scale, analyzed data to inform feature development.</li>
+          </ul>
+        </div>
+
+        <!-- Repeatable Solutions & Documentation -->
+        <div class="glass-card card-accent rounded-2xl p-6 sm:p-8">
+          <h3 class="text-lg font-semibold mb-4">Repeatable Solutions & Best Practices</h3>
+          <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Documentation:</span> Created best practices guides, API documentation, integration patterns for Teams, SharePoint, ServiceNow—enabling adoption across organization.</li>
+            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Sample Code:</span> Provided code templates and examples to customers; published architecture patterns (Event Sourcing, CQRS, distributed systems).</li>
+            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Scalable Solutions:</span> Built repeatable patterns that replaced manual processes; automated workflows; created tooling for customer self-service.</li>
+            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Open Source Contributions:</span> Public GitHub repos (Rate Limiter, Doodle App) demonstrating architecture, testing practices, and solution patterns.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
   <!-- Solutions & Cross-Functional Impact -->
   <section class="relative py-16 sm:py-28 overflow-hidden">
     <div class="spotlight"></div>
@@ -359,10 +393,10 @@
             <h3 class="text-xl font-semibold mt-2">Product Developer · Loblaws</h3>
             <p class="text-sm text-gray-500 dark:text-gray-500">Toronto, Canada</p>
             <ul class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
-              <li>Lead cross-functional teams (Engineering, HR Business Partners, CMMS operations); create PRDs, translate customer needs into technical specs, manage project delivery.</li>
-              <li>Own full technical relationship: troubleshoot issues with internal partners, provide technical recommendations, build repeatable solutions for scale.</li>
-              <li>Architected & coded event-driven messaging platform for 250K+ employees across 2,500+ stores; 93% incident reduction through observability-first design.</li>
-              <li>End-to-end zero-downtime Ceridian → Workday migration (75K+ users): designed PRD, planned execution, coordinated teams, measured adoption metrics.</li>
+              <li>Lead cross-functional teams (Engineering, HR Business Partners, CMMS operations); created PRDs, wrote solution code, tested feature functionality with partners.</li>
+              <li><strong>Architected & coded</strong> event-driven messaging platform (.NET, SignalR) for 250K+ employees across 2,500+ stores; verified performance, achieved 93% incident reduction.</li>
+              <li>Migrated HR platform (Ceridian → Workday): wrote integration code, coordinated zero-downtime deployment, tested feature compliance with 75K+ users.</li>
+              <li>Built & deployed AI chatbot solution: wrote code for Teams/SharePoint/ServiceNow integration, verified functionality with stakeholders, documented repeatable patterns.</li>
             </ul>
           </div>
 
@@ -383,10 +417,10 @@
             <h3 class="text-xl font-semibold mt-2">Product Developer · Rogers</h3>
             <p class="text-sm text-gray-500 dark:text-gray-500">Toronto, Canada</p>
             <ul class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
-              <li>Owned customer solution: gathered Finance team requirements, created PRD, designed REST API for billing & discount validation serving 10M+ records.</li>
-              <li>Troubleshot issues, analyzed SQL/database performance, optimized queries (39% gain); data-driven recommendations reduced manual review by 200%.</li>
-              <li>Scaled solution: replaced 5-day manual Excel workflow with automated platform; $300K annual savings; maintained dashboard for stakeholder reporting.</li>
-              <li>Built & maintained stakeholder relationships: presented demos, managed feature requests, iterated based on partner feedback, ensured product adoption.</li>
+              <li><strong>Owned & coded</strong> customer solution: gathered requirements, wrote REST API in C# and SQL for billing & discount validation serving 10M+ records.</li>
+              <li>Verified feature functionality: tested code with Finance stakeholders, optimized SQL queries (39% performance gain), provided data-driven recommendations to improve system.</li>
+              <li>Built repeatable solution: replaced manual workflow with automated platform ($300K annual savings); wrote documentation, created best practices guide, maintained dashboards.</li>
+              <li>Collaborated with stakeholders: presented solution code, managed feature requests, iterated based on partner feedback, ensured product adoption and quality.</li>
             </ul>
           </div>
 
@@ -420,10 +454,10 @@
               <h3 class="text-xl font-semibold mt-2">Product Developer · Loblaws</h3>
               <p class="text-sm text-gray-500 dark:text-gray-500">Toronto, Canada</p>
               <ul class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
-                <li>Lead cross-functional teams (Engineering, HR Business Partners, CMMS operations); create PRDs, translate customer needs into technical specs, manage project delivery.</li>
-                <li>Own full technical relationship: troubleshoot issues with internal partners, provide technical recommendations, build repeatable solutions for scale.</li>
-                <li>Architected & coded event-driven messaging platform for 250K+ employees across 2,500+ stores; 93% incident reduction through observability-first design.</li>
-                <li>End-to-end zero-downtime Ceridian → Workday migration (75K+ users): designed PRD, planned execution, coordinated teams, measured adoption metrics.</li>
+                <li>Lead cross-functional teams (Engineering, HR Business Partners, CMMS operations); created PRDs, wrote solution code, tested feature functionality with partners.</li>
+                <li><strong>Architected & coded</strong> event-driven messaging platform (.NET, SignalR) for 250K+ employees across 2,500+ stores; verified performance, achieved 93% incident reduction.</li>
+                <li>Migrated HR platform (Ceridian → Workday): wrote integration code, coordinated zero-downtime deployment, tested feature compliance with 75K+ users.</li>
+                <li>Built & deployed AI chatbot solution: wrote code for Teams/SharePoint/ServiceNow integration, verified functionality with stakeholders, documented repeatable patterns.</li>
               </ul>
             </div>
           </div>
