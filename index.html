@@ -245,7 +245,7 @@
   <section id="projects" class="py-16 sm:py-32">
     <div class="max-w-5xl mx-auto px-4 sm:px-8">
       <h2 class="text-2xl sm:text-3xl font-semibold mb-3 sm:mb-4">Projects</h2>
-      <!-- <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-8 sm:mb-12">Systems I built for fun and learning</p> -->
+      <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-8 sm:mb-12">Distributed systems projects focused on scale, reliability, and real-time collaboration.</p>
 
       <div class="grid md:grid-cols-2 gap-6">
 
@@ -256,7 +256,7 @@
             Distributed API Rate Limiter
           </h3>
           <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4 flex-grow">
-            Production-grade distributed rate limiter in .NET 8 handling 10K+ req/sec with <1ms p99 latency and 99.99% uptime. Written with Redis-backed atomic Lua scripts, circuit-breaker failover (<500ms), and four algorithms (token bucket, fixed window, sliding window, leaky bucket). 50+ unit tests demonstrating code quality and feature verification.
+            Designed a distributed rate limiter handling 10K+ requests/sec with sub-millisecond p99 latency and 99.99% uptime. Implemented concurrency-safe limits using Redis Lua scripts with token bucket, sliding window, and leaky bucket strategies, plus circuit breaker and in-memory failover (<500ms).
           </p>
 
           <div class="flex flex-wrap gap-2 mb-4">
@@ -278,10 +278,10 @@
           <img src="assets/DoodleDocs.png" alt="Doodle App" class="w-full h-64 object-contain bg-gray-100 dark:bg-gray-900" />
           <div class="p-8 flex-1 flex flex-col">
             <h3 class="text-xl font-semibold mb-3">
-              Real-time Collaborative Doodle App
+              DoodleDocs - Real-Time Collaborative Drawing Platform
             </h3>
             <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4 flex-grow">
-              Real-time collaborative canvas like Google Docs for doodles. Wrote code for multiple users drawing, erasing, and undo/redo together instantly via SignalR. Built on Event Sourcing + CQRS architecture for full audit trail, instant replay, and conflict-safe version history. Demonstrates pattern design for collaborative features.
+              Built a real-time collaborative drawing system using CQRS and Event Sourcing, persisting actions as immutable events for consistency, replayability, and auditability. Engineered low-latency synchronization via SignalR with read-optimized projections for concurrent shared-state updates.
             </p>
             <div class="flex flex-wrap gap-2 mb-4">
               <span class="px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-800/50 text-xs font-medium">.NET 8</span>
@@ -301,68 +301,64 @@
       </div>
     </div>
   </section>
-  <!-- Code & Technical Contributions -->
+  <!-- Achievements -->
   <section class="relative py-16 sm:py-28 overflow-hidden">
     <div class="spotlight"></div>
     <div class="max-w-5xl mx-auto px-4 sm:px-8 relative z-10">
-      <h2 class="text-2xl sm:text-3xl font-semibold mb-3 sm:mb-4">Code & Technical Contributions</h2>
-      <p class="text-gray-600 dark:text-gray-400 mb-8 sm:mb-10">Writing solution code, testing features, and creating repeatable patterns for customers</p>
+      <h2 class="text-2xl sm:text-3xl font-semibold mb-3 sm:mb-4">Achievements</h2>
+      <p class="text-gray-600 dark:text-gray-400 mb-8 sm:mb-10">Highlights from production impact, mentorship, and technical leadership.</p>
 
       <div class="grid md:grid-cols-2 gap-6">
 
-        <!-- Solution Code Writing -->
         <div class="glass-card card-accent rounded-2xl p-6 sm:p-8">
-          <h3 class="text-lg font-semibold mb-4">Solution Code Writing</h3>
+          <h3 class="text-lg font-semibold mb-4">Performance & Reliability Outcomes</h3>
           <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Production Code:</span> Wrote C#/.NET, Java, Python code for billing platforms, event-driven systems, AI integrations serving 10M+ records and 250K+ users.</li>
-            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Feature Testing & Verification:</span> Tested solution code with customers, verified functionality against requirements, provided feedback to engineering teams.</li>
-            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Code Collaboration:</span> Worked directly with Finance, HR, CMMS teams; wrote code that solved their specific problems; iterated based on customer feedback.</li>
-            <li><span class="font-semibold text-gray-900 dark:text-gray-100">SQL & Database:</span> Optimized queries (39% performance gain), designed schemas for scale, analyzed data to inform feature development.</li>
+            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Reduced production incidents by 93%:</span> Stabilized a high-availability recalls system and improved compliance to 80% while maintaining 99%+ uptime.</li>
+            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Improved data timeliness:</span> Cut Power BI latency from 5 minutes to 1.3 seconds by building Azure Data Factory pipelines over millions of daily records.</li>
+            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Optimized enterprise SQL workloads:</span> Improved high-volume database performance by 39% through query and stored procedure tuning.</li>
+            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Awarded performance bonus:</span> Received a $5,000 bonus for high-impact contributions to enterprise intranet systems.</li>
           </ul>
         </div>
 
-        <!-- Repeatable Solutions & Documentation -->
         <div class="glass-card card-accent rounded-2xl p-6 sm:p-8">
-          <h3 class="text-lg font-semibold mb-4">Repeatable Solutions & Best Practices</h3>
+          <h3 class="text-lg font-semibold mb-4">Leadership & Team Impact</h3>
           <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Documentation:</span> Created best practices guides, API documentation, integration patterns for Teams, SharePoint, ServiceNow—enabling adoption across organization.</li>
-            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Sample Code:</span> Provided code templates and examples to customers; published architecture patterns (Event Sourcing, CQRS, distributed systems).</li>
-            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Scalable Solutions:</span> Built repeatable patterns that replaced manual processes; automated workflows; created tooling for customer self-service.</li>
-            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Open Source Contributions:</span> Public GitHub repos (Rate Limiter, Doodle App) demonstrating architecture, testing practices, and solution patterns.</li>
+            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Mentored 5 engineers:</span> Improved code quality and reduced production defects by 39% through technical reviews and implementation guidance.</li>
+            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Technical Review Board contributor:</span> Led cross-system risk reviews, blocked high-risk deployments, and influenced architecture decisions reducing P1/P2 incidents.</li>
+            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Enterprise AI adoption:</span> Built and integrated an AI Copilot chatbot with SharePoint, Workday, and ServiceNow, reducing support requests by 30%.</li>
+            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Internal enablement:</span> Led Azure distributed systems workshops to scale best practices across engineering teams.</li>
           </ul>
         </div>
 
       </div>
     </div>
   </section>
-  <!-- Solutions & Cross-Functional Impact -->
+  <!-- Selected Impact -->
   <section class="relative py-16 sm:py-28 overflow-hidden">
     <div class="spotlight"></div>
     <div class="max-w-5xl mx-auto px-4 sm:px-8 relative z-10">
-      <h2 class="text-2xl sm:text-3xl font-semibold mb-3 sm:mb-4">Solutions & Customer Impact</h2>
-      <p class="text-gray-600 dark:text-gray-400 mb-8 sm:mb-10">Full-cycle customer solution ownership: from discovery to delivery</p>
+      <h2 class="text-2xl sm:text-3xl font-semibold mb-3 sm:mb-4">Selected Impact</h2>
+      <p class="text-gray-600 dark:text-gray-400 mb-8 sm:mb-10">Production systems delivered across communications, data, identity, and billing domains.</p>
 
       <div class="grid md:grid-cols-2 gap-6">
 
-        <!-- End-to-End Solution Development -->
         <div class="glass-card card-accent rounded-2xl p-6 sm:p-8">
-          <h3 class="text-lg font-semibold mb-4">End-to-End Technical Solutions</h3>
+          <h3 class="text-lg font-semibold mb-4">Loblaws Companies Limited</h3>
           <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Requirements & PRDs:</span> Weekly customer/partner meetings to gather requirements, create detailed product specs, validate alignment with business & technical needs.</li>
-            <li><span class="font-semibold text-gray-900 dark:text-gray-100">System Design & Code:</span> Design scalable solutions, write production code (C#, Java, C++), troubleshoot issues with partners, mentor cross-functional teams.</li>
-            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Analytics & Data-Driven:</span> Develop dashboards, analyze metrics (SQL/MySQL), measure ROI, provide data-backed recommendations to customers.</li>
-            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Repeatable Solutions:</span> Document best practices, create reusable templates, scale solutions across customer base, maintain relationships for ongoing support.</li>
+            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Event-driven messaging platform:</span> Led a team of 5 building a .NET + Azure Service Bus system for 250,000+ employees across 2,500+ stores.</li>
+            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Recalls platform stabilization:</span> Achieved 99%+ uptime with incident response under a 6-hour P1 SLA and major reduction in escalations.</li>
+            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Workday migration:</span> Led zero-downtime migration for 75,000+ employees via XML ingestion and SCIM-based identity provisioning.</li>
+            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Enterprise AI Copilot:</span> Delivered RAG-based assistant on Azure OpenAI integrated with SharePoint, Workday, and ServiceNow.</li>
           </ul>
         </div>
 
-        <!-- Proven Customer Solutions -->
         <div class="glass-card card-accent rounded-2xl p-6 sm:p-8">
-          <h3 class="text-lg font-semibold mb-4">Proven Customer Solutions</h3>
+          <h3 class="text-lg font-semibold mb-4">Rogers Communications</h3>
           <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Billing Validation Platform (Rogers):</span> Solved Finance team's manual workflow problem; 200% efficiency gain, $300K annual savings, 10M+ records handled reliably.</li>
-            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Event-Driven Messaging (Loblaws):</span> Unified communication for 250K+ employees; architected with customer input, deployed without downtime, reduced incidents by 93%.</li>
-            <li><span class="font-semibold text-gray-900 dark:text-gray-100">AI Chatbot Solution (Loblaws):</span> Automated HR/ServiceNow requests; iterated based on customer feedback, 30% reduction in support volume, trained non-technical users.</li>
-            <li><span class="font-semibold text-gray-900 dark:text-gray-100">HR Platform Migration (Loblaws):</span> Zero-downtime Ceridian → Workday cutover for 75K+ users; owned entire delivery, coordinated stakeholders, ensured adoption.</li>
+            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Billing validation platform:</span> Built a C#/.NET system processing 10M+ records, replacing third-party tooling and reducing operating costs by $150K annually.</li>
+            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Workflow modernization:</span> Transformed a 5-day Excel process into a real-time RESTful system, increasing processing efficiency by 200%.</li>
+            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Database performance:</span> Improved throughput in high-volume billing systems by 39% through SQL query and procedure optimization.</li>
+            <li><span class="font-semibold text-gray-900 dark:text-gray-100">Frontend quality:</span> Delivered accessible enterprise UI components aligned with WCAG 2.1 standards.</li>
           </ul>
         </div>
 
@@ -380,38 +376,27 @@
       <div class="md:hidden relative">
         <div class="experience-scroll flex overflow-x-auto space-x-6 pb-8 pr-12">
           <div class="glass-card card-accent rounded-2xl p-6 w-80 flex-shrink-0">
-            <p class="text-sm font-semibold text-cyan-400">Jan 2025 – Present</p>
-            <h3 class="text-xl font-semibold mt-2">Product Developer · Loblaws</h3>
+            <p class="text-sm font-semibold text-cyan-400">Jan 2025 – Mar 2026</p>
+            <h3 class="text-xl font-semibold mt-2">Software Developer · Loblaws Companies Limited</h3>
             <p class="text-sm text-gray-500 dark:text-gray-500">Toronto, Canada</p>
             <ul class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
-              <li><strong>Led cross-functional teams</strong> (Engineering, HR Business Partners, CMMS) across 2,500+ stores; created PRDs, architected technical solutions, managed delivery.</li>
-              <li><strong>Architected & scaled</strong> event-driven messaging platform: handled 250K+ concurrent users, achieved 93% reduction in critical incidents through observability-first design.</li>
-              <li><strong>Owned zero-downtime migration</strong> (Ceridian → Workday, 75K+ users): designed architecture, coordinated cross-team execution, achieved 100% adoption without service disruption.</li>
-              <li><strong>Built & deployed</strong> AI chatbot solution (Teams, SharePoint, ServiceNow): reduced support requests by 30%, automated 40+ recurring workflows.</li>
-            </ul>
-          </div>
-
-          <div class="glass-card card-accent rounded-2xl p-6 w-80 flex-shrink-0">
-            <p class="text-sm font-semibold text-cyan-400">Feb 2021 – May 2023</p>
-            <h3 class="text-xl font-semibold mt-2">Sales Associate & Manager on Duty · Rogers</h3>
-            <p class="text-sm text-gray-500 dark:text-gray-500">Toronto, Canada</p>
-            <ul class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
-              <li>Sold telecom services across multiple downtown Toronto locations; promoted to Manager on Duty managing 6+ associates.</li>
-              <li>Store of the Year award (Apple partnership) for sales performance; demonstrated ability to understand customer needs and close solutions.</li>
-              <li>Identified customer pain points, escalated to management; built foundational understanding of enterprise customer relationships and sales dynamics.</li>
-              <li>Transitioned technical skills: recognized opportunity to solve customer problems programmatically → moved to Billing Software Development (May 2023).</li>
+              <li><strong>Led development</strong> of an event-driven intranet messaging platform in C#/.NET + Azure Service Bus for 250,000+ employees across 2,500+ stores.</li>
+              <li><strong>Reduced production incidents by 93%</strong> and improved compliance to 80% by stabilizing a high-availability recalls system with 99%+ uptime.</li>
+              <li><strong>Built an AI Copilot chatbot</strong> (RAG + Azure OpenAI) integrated with SharePoint, Workday, and ServiceNow, reducing support requests by 30%.</li>
+              <li><strong>Cut Power BI latency</strong> from 5 minutes to 1.3 seconds via Azure Data Factory pipelines processing millions of records daily.</li>
+              <li><strong>Led zero-downtime migration</strong> of 75,000+ employees from Ceridian to Workday with XML ingestion and SCIM-based provisioning.</li>
             </ul>
           </div>
 
           <div class="glass-card card-accent rounded-2xl p-6 w-80 flex-shrink-0">
             <p class="text-sm font-semibold text-cyan-400">May 2023 – Jan 2025</p>
-            <h3 class="text-xl font-semibold mt-2">Product Developer · Rogers</h3>
+            <h3 class="text-xl font-semibold mt-2">Software Developer · Rogers Communications</h3>
             <p class="text-sm text-gray-500 dark:text-gray-500">Toronto, Canada</p>
             <ul class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
-              <li><strong>Architected & deployed</strong> REST API for billing & discount validation: replaced 5-day manual process with automated platform serving 10M+ customer records, delivering <strong>$300K annual savings</strong>.</li>
-              <li><strong>Optimized system performance</strong>: refactored SQL queries achieving 39% latency improvement; scaled database to handle 10M+ transactions reliably with 99.99% uptime.</li>
-              <li><strong>Led stakeholder relationship</strong> (Finance team): conducted requirement discovery, presented solution code, managed feature requests, achieved 98% user adoption.</li>
-              <li><strong>Built repeatable solutions</strong>: created best practices guide, API documentation, integration patterns enabling team autonomy.</li>
+              <li><strong>Built a billing validation platform</strong> in C#/.NET processing 10M+ records, replacing third-party tooling and reducing costs by $150K annually.</li>
+              <li><strong>Modernized billing workflows</strong> from a 5-day Excel process to a real-time RESTful system, improving processing efficiency by 200%.</li>
+              <li><strong>Improved database performance by 39%</strong> through optimization of SQL queries and stored procedures in high-volume systems.</li>
+              <li><strong>Developed accessible frontend components</strong> for enterprise billing tools, supporting WCAG 2.1 compliance.</li>
             </ul>
           </div>
 
@@ -419,14 +404,14 @@
             <p class="text-sm font-semibold text-cyan-400">Jan 2022 – Dec 2022</p>
             <h3 class="text-xl font-semibold mt-2">Post Graduate Diploma · Software Engineering</h3>
             <p class="text-sm text-gray-500 dark:text-gray-500">Centennial College, Toronto</p>
-            <p class="mt-4 text-sm text-gray-600 dark:text-gray-400">Coursework: Cloud Computing, Distributed Systems, API Design, DevOps & CI/CD, Software Architecture.</p>
+              <p class="mt-4 text-sm text-gray-600 dark:text-gray-400">Post Graduate Diploma in Software Engineering | GPA: 3.5/4.0</p>
           </div>
 
           <div class="glass-card card-accent rounded-2xl p-6 w-80 flex-shrink-0">
             <p class="text-sm font-semibold text-cyan-400">May 2017 – Dec 2020</p>
             <h3 class="text-xl font-semibold mt-2">Bachelor of Computer Science</h3>
             <p class="text-sm text-gray-500 dark:text-gray-500">GGSIPU, New Delhi</p>
-            <p class="mt-4 text-sm text-gray-600 dark:text-gray-400">Coursework: DSA, OS, DBMS, Computer Networks, OOP.</p>
+            <p class="mt-4 text-sm text-gray-600 dark:text-gray-400">Guru Gobind Singh Indraprastha University | GPA: 9.4/10</p>
           </div>
         </div>
         <div class="scroll-hint">Swipe to explore →</div>
@@ -441,14 +426,15 @@
         <div class="relative mb-12 flex items-center">
           <div class="w-1/2 pr-10">
             <div class="glass-card card-accent rounded-2xl p-6">
-              <p class="text-sm font-semibold text-cyan-400">Jan 2025 – Present</p>
-              <h3 class="text-xl font-semibold mt-2">Product Developer · Loblaws</h3>
+              <p class="text-sm font-semibold text-cyan-400">Jan 2025 – Mar 2026</p>
+              <h3 class="text-xl font-semibold mt-2">Software Developer · Loblaws Companies Limited</h3>
               <p class="text-sm text-gray-500 dark:text-gray-500">Toronto, Canada</p>
               <ul class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
-                <li><strong>Led cross-functional teams</strong> (Engineering, HR Business Partners, CMMS) across 2,500+ stores; created PRDs, architected technical solutions, managed delivery.</li>
-                <li><strong>Architected & scaled</strong> event-driven messaging platform: handled 250K+ concurrent users, achieved 93% reduction in critical incidents through observability-first design.</li>
-                <li><strong>Owned zero-downtime migration</strong> (Ceridian → Workday, 75K+ users): designed architecture, coordinated cross-team execution, achieved 100% adoption without service disruption.</li>
-                <li><strong>Built & deployed</strong> AI chatbot solution (Teams, SharePoint, ServiceNow): reduced support requests by 30%, automated 40+ recurring workflows.</li>
+                <li><strong>Led development</strong> of an event-driven intranet messaging platform in C#/.NET + Azure Service Bus for 250,000+ employees across 2,500+ stores.</li>
+                <li><strong>Reduced production incidents by 93%</strong> and improved compliance to 80% by stabilizing a high-availability recalls system with 99%+ uptime.</li>
+                <li><strong>Built an AI Copilot chatbot</strong> (RAG + Azure OpenAI) integrated with SharePoint, Workday, and ServiceNow, reducing support requests by 30%.</li>
+                <li><strong>Cut Power BI latency</strong> from 5 minutes to 1.3 seconds via Azure Data Factory pipelines processing millions of records daily.</li>
+                <li><strong>Led zero-downtime migration</strong> of 75,000+ employees from Ceridian to Workday with XML ingestion and SCIM-based provisioning.</li>
               </ul>
             </div>
           </div>
@@ -456,38 +442,19 @@
           <div class="absolute left-1/2 top-8 w-4 h-4 bg-cyan-400 rounded-full border-4 border-white dark:border-black -translate-x-1/2"></div>
         </div>
 
-        <!-- Rogers Sales Associate -->
-        <div class="relative mb-12 flex items-center">
-          <div class="w-1/2"></div>
-          <div class="w-1/2 pl-10">
-            <div class="glass-card card-accent rounded-2xl p-6">
-              <p class="text-sm font-semibold text-cyan-400">Feb 2021 – May 2023</p>
-              <h3 class="text-xl font-semibold mt-2">Sales Associate & Manager on Duty · Rogers</h3>
-              <p class="text-sm text-gray-500 dark:text-gray-500">Toronto, Canada</p>
-              <ul class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
-                <li>Sold telecom services across multiple downtown Toronto locations; promoted to Manager on Duty managing 6+ associates.</li>
-                <li>Store of the Year award (Apple partnership) for sales performance; demonstrated ability to understand customer needs and close solutions.</li>
-                <li>Identified customer pain points, escalated to management; built foundational understanding of enterprise customer relationships and sales dynamics.</li>
-                <li>Transitioned technical skills: recognized opportunity to solve customer problems programmatically → moved to Billing Software Development (May 2023).</li>
-              </ul>
-            </div>
-          </div>
-          <div class="absolute left-1/2 top-8 w-4 h-4 bg-cyan-400 rounded-full border-4 border-white dark:border-black -translate-x-1/2"></div>
-        </div>
-
-        <!-- Rogers Product Developer -->
+        <!-- Rogers -->
         <div class="relative mb-12 flex items-center">
           <div class="w-1/2"></div>
           <div class="w-1/2 pl-10">
             <div class="glass-card card-accent rounded-2xl p-6">
               <p class="text-sm font-semibold text-cyan-400">May 2023 – Jan 2025</p>
-              <h3 class="text-xl font-semibold mt-2">Product Developer · Rogers</h3>
+              <h3 class="text-xl font-semibold mt-2">Software Developer · Rogers Communications</h3>
               <p class="text-sm text-gray-500 dark:text-gray-500">Toronto, Canada</p>
               <ul class="mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400">
-                <li><strong>Architected & deployed</strong> REST API for billing & discount validation: replaced 5-day manual process with automated platform serving 10M+ customer records, delivering <strong>$300K annual savings</strong>.</li>
-                <li><strong>Optimized system performance</strong>: refactored SQL queries achieving 39% latency improvement; scaled database to handle 10M+ transactions reliably with 99.99% uptime.</li>
-                <li><strong>Led stakeholder relationship</strong> (Finance team): conducted requirement discovery, presented solution code, managed feature requests, achieved 98% user adoption.</li>
-                <li><strong>Built repeatable solutions</strong>: created best practices guide, API documentation, integration patterns enabling team autonomy.</li>
+                <li><strong>Built a billing validation platform</strong> in C#/.NET processing 10M+ records, replacing third-party tooling and reducing costs by $150K annually.</li>
+                <li><strong>Modernized billing workflows</strong> from a 5-day Excel process to a real-time RESTful system, improving processing efficiency by 200%.</li>
+                <li><strong>Improved database performance by 39%</strong> through optimization of SQL queries and stored procedures in high-volume systems.</li>
+                <li><strong>Developed accessible frontend components</strong> for enterprise billing tools, supporting WCAG 2.1 compliance.</li>
               </ul>
             </div>
           </div>
@@ -501,7 +468,7 @@
               <p class="text-sm font-semibold text-cyan-400">Jan 2022 – Dec 2022</p>
               <h3 class="text-xl font-semibold mt-2">Post Graduate Diploma · Software Engineering</h3>
               <p class="text-sm text-gray-500 dark:text-gray-500">Centennial College, Toronto</p>
-              <p class="mt-4 text-sm text-gray-600 dark:text-gray-400">Coursework: Cloud Computing, Distributed Systems, API Design, DevOps & CI/CD, Software Architecture.</p>
+              <p class="mt-4 text-sm text-gray-600 dark:text-gray-400">Post Graduate Diploma in Software Engineering | GPA: 3.5/4.0</p>
             </div>
           </div>
           <div class="w-1/2"></div>
@@ -516,7 +483,7 @@
               <p class="text-sm font-semibold text-cyan-400">May 2017 – Dec 2020</p>
               <h3 class="text-xl font-semibold mt-2">Bachelor of Computer Science</h3>
               <p class="text-sm text-gray-500 dark:text-gray-500">GGSIPU, New Delhi</p>
-              <p class="mt-4 text-sm text-gray-600 dark:text-gray-400">Coursework: Data Structures and Algorithms, Operating Systems, DBMS, Computer Networks, Object Oriented Programming.</p>
+              <p class="mt-4 text-sm text-gray-600 dark:text-gray-400">Guru Gobind Singh Indraprastha University | GPA: 9.4/10</p>
             </div>
           </div>
           <div class="absolute left-1/2 top-8 w-4 h-4 bg-cyan-400 rounded-full border-4 border-white dark:border-black -translate-x-1/2"></div>
@@ -532,8 +499,9 @@
       <div class="glass-card card-accent rounded-2xl p-8 sm:p-12 max-w-2xl mx-auto">
         <h2 class="text-3xl sm:text-4xl font-semibold mb-3 sm:mb-4">Get in Touch</h2>
         <p class="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-6 sm:mb-8">
-          Open to roles focused on customer solutions, technical leadership, and cross-functional impact. Let's talk about solving meaningful problems.
+          Open to Software Developer and Software Engineer opportunities focused on backend, distributed systems, and high-impact enterprise platforms.
         </p>
+        <p class="text-sm text-gray-500 dark:text-gray-500 mb-6">New Delhi, India · +91 9811195856</p>
         <div class="flex flex-wrap justify-center gap-2 sm:gap-3">
           <a href="https://github.com/RishabhDevDogra" target="_blank"
              class="cta-primary px-6 sm:px-8 py-3 sm:py-3.5 rounded-full font-medium hover:scale-105 active:scale-95 transition-transform duration-200 inline-flex items-center gap-2 text-sm sm:text-base" rel="noopener noreferrer">
